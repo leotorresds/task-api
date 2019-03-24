@@ -6,6 +6,10 @@ const taskRouter = require('./routers/task');
 const app = express();
 const port = process.env.PORT;
 
+app.get('/', (req, res) => {
+    res.send("LT-TASK API")
+});
+
 app.use(express.json());
 app.use(userRouter);
 app.use(taskRouter);
